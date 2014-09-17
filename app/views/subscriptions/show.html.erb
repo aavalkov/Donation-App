@@ -4,7 +4,7 @@
 <p>Interval: <%= @subscription.interval %></p>
 <p>Amount: <%= @subscription.amount%> <%= @subscription.currency %></p>
 
-
+<%= link_to "Donate", new_charge_path(:amount => @subscription.amount), :class => "btn btn-success" %>
 
 
 

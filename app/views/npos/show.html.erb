@@ -4,4 +4,7 @@
 <p><%= @npo.description %></p>
 
 <%= link_to "Donate", new_charge_path, :class => "btn btn-success" %>
+<%= link_to "Subscribe", npo_subscriptions_path(@npo.id), :class =>"btn btn-warning"%>
+
+
 
