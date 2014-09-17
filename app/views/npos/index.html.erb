@@ -1,0 +1,9 @@
+<h1>NPOs</h1>
+
+<ul>
+<% @npos.each do |npo| %>
+    <li><%= link_to npo.name, npo_path(npo) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "New npo", new_npo_path %>
