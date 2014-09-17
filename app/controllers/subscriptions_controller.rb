@@ -49,6 +49,6 @@ class SubscriptionsController < ApplicationController
 private
 
   def subscription_params
-    params.require(:subscription).permit(:npo_id, :interval, :currency, :name, :id)
+    params.require(:subscription).permit(:npo_id, :interval, :currency, :name, :amount, :id)
   end
 end

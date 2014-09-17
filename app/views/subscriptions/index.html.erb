@@ -2,7 +2,7 @@
 
 <ul>
 <% @npo.subscriptions.each do |subscription| %>
-    <li><%= subscription.name %><%= link_to subscription.name, npo_subscription_path(@npo.id, subscription.id) %></li>
+    <li><%= link_to subscription.name, npo_subscription_path(@npo.id, subscription.id) %></li>
   <% end %>
 </ul>
 
