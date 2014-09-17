@@ -1,0 +1,10 @@
+<%= form_for [@npo, @subscription] do |f| %>
+  <%=f.label :name %>
+  <%=f.text_field :name %>
+  <%=f.label :interval %>
+  <%=f.text_field :interval, value: 'month' %>
+  <%=f.label :currency %>
+  <%=f.text_field :currency, value: 'usd' %>
+  <%=f.hidden_field :npo_id, value: @npo.id %>
+  <%= f.submit :class => "btn btn-danger", :value => "submit" %>
+<% end%>

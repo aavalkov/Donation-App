@@ -1,0 +1,9 @@
+<h1>Subscriptions</h1>
+
+<ul>
+<% @npo.subscriptions.each do |subscription| %>
+    <li><%= subscription.name %><%= link_to subscription.name, npo_subscription_path(@npo.id, subscription.id) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "New subscription", new_npo_subscription_path %>

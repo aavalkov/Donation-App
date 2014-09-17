@@ -11,16 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140917210051) do
+ActiveRecord::Schema.define(version: 20140917212047) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "donations", force: true do |t|
+    t.integer "user_id"
+    t.integer "npos_id"
+    t.integer "amount"
+    t.string  "currency"
+  end
 
   create_table "npos", force: true do |t|
     t.string   "name"
     t.text     "description"
     t.integer  "account"
     t.float    "balance"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "subscriptions", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "npo_id"
+    t.string   "interval"
+    t.string   "currency"
+    t.integer  "amount"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

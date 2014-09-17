@@ -11,6 +11,7 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'jquery-rails'
 gem 'rest-client'
 gem 'turbolinks'
+gem 'binding_of_caller'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
